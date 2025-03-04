@@ -29,7 +29,7 @@
 variable1 = 1;
 variable2 = 2;
 variable3 = 3;
-
+/// Change change change
 // b. Hint: This function needs a name after the word function.
 function sayHello() {
     console.log('Hello!');
