@@ -19,7 +19,10 @@ const ethers = require("ethers");
 // a. Create a random wallet and print the address, the private key,
 // and the mnenomic phrase.
 // Hint: ethers.Wallet.createRandom();
-
+let wallet = ethers.Wallet.createRandom();
+console.log("Address:", wallet.address);
+console.log("Private Key:", wallet.privateKey);
+console.log("Mnemonic phrase:", wallet.mnemonic.phrase);
 
 // exit();
 
@@ -37,10 +40,13 @@ let baseDevPath = "m/44'/60'/0'/0/";
 // Also:
 // https://vault12.com/securemycrypto/crypto-security-basics/what-is-bip39/
 
+// Note by Nhat: Essentially, a derivation path is like a set of directions that a crypto wallet uses to turn your secret "seed phrase" into specific wallet addresses. If you use the wrong directions, you'll end up with empty addresses, even if your seed phrase is correct.
 
 console.log("Derivation path:", wallet.path);
 
 // Your code here!
+console.log("Derivation path:", wallet.path);
+console.log("Is the derivation path equal to baseDevPath?", wallet.path === baseDevPath);
 
 
 // exit();
